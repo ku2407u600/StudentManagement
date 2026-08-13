@@ -12,3 +12,10 @@ def display_students(student_list):
     print('Student Information')
     for student in student_list:
         print(f"Name: {student['name']}, Enrollment: {student['enrollment']}, Marks: {student['marks']}")
+
+
+def average_marks(student_list):
+    if not student_list:
+        return 0
+    total = sum(student['marks'] for student in student_list)
+    return total / len(student_list)
