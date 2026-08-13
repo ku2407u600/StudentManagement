@@ -36,11 +36,12 @@ def average_marks(student_list):
     if not student_list:
         return 0
     total = sum(student['marks'] for student in student_list)
-  return round(total / len(student_list), 2)
+    return round(total / len(student_list), 2)
 
-def search_student(student_list, enrollment):
+def search_student(student_list, search_value):
     for student in student_list:
-        if student['enrollment'].lower() == enrollment.lower():
+        if (student['enrollment'].lower() == search_value.lower()
+                or student['name'].lower() == search_value.lower()):
             return student
     return None
 
