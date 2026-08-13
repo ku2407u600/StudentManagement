@@ -22,6 +22,9 @@ def display_students(student_list):
         print('No student records available.')
         return
     print('Student Records - Grade Management System')
+    print("Name\tEnrollment\tMarks")
+    print("-" * 40)
+    
     for student in student_list:
         print(f"Name: {student['name']}, Enrollment: {student['enrollment']}, Marks: {student['marks']}")
 
