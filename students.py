@@ -14,6 +14,10 @@ def display_students(student_list):
         print(f"Name: {student['name']}, Enrollment: {student['enrollment']}, Marks: {student['marks']}")
 
 
+def validate_marks(marks):
+    return 0 <= marks <= 100
+
+
 def average_marks(student_list):
     if not student_list:
         return 0
