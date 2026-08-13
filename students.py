@@ -33,6 +33,8 @@ def search_student(student_list, enrollment):
 
 
 def calculate_grade(marks):
+    if not validate_marks(marks):
+        return 'Invalid'
     if marks >= 90:
         return 'A'
     elif marks >= 80:
