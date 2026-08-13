@@ -1,4 +1,8 @@
-students = []
+students = [
+    {'name': 'Aarav', 'enrollment': 'BCA101', 'marks': 85},
+    {'name': 'Diya', 'enrollment': 'BCA102', 'marks': 72},
+    {'name': 'Kabir', 'enrollment': 'BCA103', 'marks': 91},
+]
 
 
 def display_students(student_list):
