@@ -3,7 +3,19 @@ students = [
     {'name': 'Diya', 'enrollment': 'BCA102', 'marks': 72},
     {'name': 'Kabir', 'enrollment': 'BCA103', 'marks': 91},
 ]
+def add_student(name, enrollment, marks):
+    if not validate_marks(marks):
+        print("Invalid marks. Marks must be between 0 and 100.")
+        return
 
+    student = {
+        'name': name,
+        'enrollment': enrollment,
+        'marks': marks
+    }
+
+    students.append(student)
+    print("Student added successfully.")
 
 def display_students(student_list):
     if not student_list:
