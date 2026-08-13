@@ -22,9 +22,8 @@ def display_students(student_list):
         print('No student records available.')
         return
     print('Student Records - Grade Management System')
-    print("Name\tEnrollment\tMarks")
+    print("Name\tEnrollment\tMarks")    
     print("-" * 40)
-    
     for student in student_list:
         print(f"Name: {student['name']}, Enrollment: {student['enrollment']}, Marks: {student['marks']}")
 
@@ -37,8 +36,7 @@ def average_marks(student_list):
     if not student_list:
         return 0
     total = sum(student['marks'] for student in student_list)
-    return total / len(student_list)
-
+  return round(total / len(student_list), 2)
 
 def search_student(student_list, enrollment):
     for student in student_list:
