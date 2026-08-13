@@ -13,3 +13,6 @@ A simple Python project created for Practical 5: Git Version Control and Branch 
 
 ## Validation
 Marks are validated to ensure they remain between 0 and 100.
+
+## Feature Branch
+The `feature-grade` branch adds grade calculation using A/B/C/D/F categories.

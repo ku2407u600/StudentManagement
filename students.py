@@ -9,7 +9,7 @@ def display_students(student_list):
     if not student_list:
         print('No student records available.')
         return
-    print('Student Records - Main Branch')
+    print('Student Records - Grade Management System')
     for student in student_list:
         print(f"Name: {student['name']}, Enrollment: {student['enrollment']}, Marks: {student['marks']}")
 
@@ -30,3 +30,17 @@ def search_student(student_list, enrollment):
         if student['enrollment'].lower() == enrollment.lower():
             return student
     return None
+
+
+def calculate_grade(marks):
+    if not validate_marks(marks):
+        return 'Invalid'
+    if marks >= 90:
+        return 'A'
+    elif marks >= 80:
+        return 'B'
+    elif marks >= 70:
+        return 'C'
+    elif marks >= 60:
+        return 'D'
+    return 'F'
